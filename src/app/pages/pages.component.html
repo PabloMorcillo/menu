@@ -1,0 +1,26 @@
+<router-outlet></router-outlet>
+<!-- <div class="col-lg-8 col-lg-offset-2">
+    <table class="table table-hover">
+        <tr style="border:1px solid red">
+            <td>{{ fecha | date :'short' }}</td>
+            <td>{{ dato | pipe }}</td>
+        </tr>
+    </table>
+</div>
+
+<div id="caja">
+    <div id="caja2" [@myAwesomeAnimation]='state'>
+        {{ text | text: !arg }}
+        <a (click)="arg = !arg;animateMe() ">click</a>
+    </div>
+    <div> -->
+<ul>
+    <li style="border-bottom:1px solid black">VALIDATION</li>
+    <ul *ngFor="let item of menu">
+        <li>{{ item.name }}</li>
+        <ul>
+            <li *ngFor="let itemtext of item.menu"><a href=" {{itemtext.url}} ">{{ itemtext.idtitle | name }} </a></li>
+        </ul>
+    </ul>
+</ul>
+{{ this.menuProgram | json }}
