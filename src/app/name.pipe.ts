@@ -8,7 +8,7 @@ export class NamePipe implements PipeTransform {
   listProgram = [{
     program: [{ convocatoria: '2017', idprogram: '1'}, { convocatoria: '2018', idprogram: '4'}],
     textLegal: [{ url: 'sport', idProgram: 4 , idtitle: 5 },
-                { url: 'marca', idProgram: 1 , idtitle: 2 },
+                { url: 'marca', idProgram: 1 , idtitle: null },
                 { url: 'sport', idProgram: 3 , idtitle: 1 },
                 { url: 'luna', idProgram: 4 , idtitle: 6 },
                 { url: 'elpais', idProgram: 4 , idtitle: 7},
@@ -30,7 +30,7 @@ title: String;
     // tslint:disable-next-line:no-unused-expression
     
     this.listProgram[0].Legaladmin.forEach(element => {
-      
+     
               if( element.idtitle == value ){
                  this.title = element.title;
               }

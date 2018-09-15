@@ -19,7 +19,7 @@
     <ul *ngFor="let item of menu">
         <li>{{ item.name }}</li>
         <ul>
-            <li *ngFor="let itemtext of item.menu"><a href=" {{itemtext.url}} ">{{ itemtext.idtitle | name }} </a></li>
+            <li *ngFor="let itemtext of item.menu"><a href=" {{itemtext.url}} ">{{ itemtext.title }} </a></li>
         </ul>
     </ul>
 </ul>

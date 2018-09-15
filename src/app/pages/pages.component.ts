@@ -7,13 +7,7 @@ import ResizeObserver from 'resize-observer-polyfill';
   selector: 'app-pages',
   templateUrl: './pages.component.html',
   styles: [ '#caja { width: 300px; border: 1px solid red;  overflow: hidden; transition: height 2s;}'
- ],
-  animations: [
-   
-    trigger('myAwesomeAnimation', [state('small', style({ height: '100px' })),
-    state('large', style({ height: '*' })),
-    transition('large <=> small', animate(500))]
-})
+ ]})
 
 export class PagesComponent implements OnInit {
   text: string ;
@@ -25,7 +19,7 @@ export class PagesComponent implements OnInit {
   listProgram: any[] = [];
    name: String;
    menuProgram: any [] = [];
-
+   task_names: any[] = [];
 
   constructor( route: ActivatedRoute ) { 
 
@@ -49,8 +43,12 @@ export class PagesComponent implements OnInit {
   ngOnInit() {
     this.localHost();
     this.setMenu();
-    
 
+    this.listProgram[0].textLegal.forEach( element => {
+       this.listProgram[0].Legaladmin.map(( item ) => ( item.idtitle == element.idtitle) ? element.title = item.title : ' -- ');
+    });
+
+    console.log('pureba', this.listProgram)
     this.text =  'del PP, Pablo Casado, alivia a la nueva dirección popular';
     this.text +=  'del PP, Pablo Casado, alivia a la nueva dirección popular';
     this.text +=  'del PP, Pablo Casado, alivia a la nueva dirección popular';
